@@ -12,6 +12,9 @@
 		DF67BDBF2A275028006A1CAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF67BDBE2A275028006A1CAA /* Assets.xcassets */; };
 		DF67BDC22A275028006A1CAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF67BDC02A275028006A1CAA /* Main.storyboard */; };
 		DF67BDC42A275028006A1CAA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DF67BDC32A275028006A1CAA /* main.m */; };
+		DF67BDCD2A2750C0006A1CAA /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF67BDCC2A2750C0006A1CAA /* GLKit.framework */; };
+		DF67BDD02A2750D2006A1CAA /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF67BDCF2A2750D2006A1CAA /* OpenGL.framework */; };
+		DF67BDD32A2751EE006A1CAA /* MyGL View.m in Sources */ = {isa = PBXBuildFile; fileRef = DF67BDD22A2751EE006A1CAA /* MyGL View.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,11 @@
 		DF67BDC12A275028006A1CAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DF67BDC32A275028006A1CAA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DF67BDC52A275028006A1CAA /* MyGL_Game.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyGL_Game.entitlements; sourceTree = "<group>"; };
+		DF67BDCC2A2750C0006A1CAA /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		DF67BDCE2A2750C2006A1CAA /* MyGL-Game-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MyGL-Game-Info.plist"; sourceTree = SOURCE_ROOT; };
+		DF67BDCF2A2750D2006A1CAA /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		DF67BDD12A2751EE006A1CAA /* MyGL View.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyGL View.h"; sourceTree = "<group>"; };
+		DF67BDD22A2751EE006A1CAA /* MyGL View.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MyGL View.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF67BDCD2A2750C0006A1CAA /* GLKit.framework in Frameworks */,
+				DF67BDD02A2750D2006A1CAA /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +52,7 @@
 			children = (
 				DF67BDB72A275027006A1CAA /* MyGL Game */,
 				DF67BDB62A275027006A1CAA /* Products */,
+				DF67BDCB2A2750C0006A1CAA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,16 +67,28 @@
 		DF67BDB72A275027006A1CAA /* MyGL Game */ = {
 			isa = PBXGroup;
 			children = (
+				DF67BDCE2A2750C2006A1CAA /* MyGL-Game-Info.plist */,
 				DF67BDB82A275027006A1CAA /* AppDelegate.h */,
 				DF67BDB92A275027006A1CAA /* AppDelegate.m */,
 				DF67BDBB2A275027006A1CAA /* ViewController.h */,
 				DF67BDBC2A275027006A1CAA /* ViewController.m */,
+				DF67BDD12A2751EE006A1CAA /* MyGL View.h */,
+				DF67BDD22A2751EE006A1CAA /* MyGL View.m */,
 				DF67BDBE2A275028006A1CAA /* Assets.xcassets */,
 				DF67BDC02A275028006A1CAA /* Main.storyboard */,
 				DF67BDC32A275028006A1CAA /* main.m */,
 				DF67BDC52A275028006A1CAA /* MyGL_Game.entitlements */,
 			);
 			path = "MyGL Game";
+			sourceTree = "<group>";
+		};
+		DF67BDCB2A2750C0006A1CAA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF67BDCF2A2750D2006A1CAA /* OpenGL.framework */,
+				DF67BDCC2A2750C0006A1CAA /* GLKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +162,7 @@
 			files = (
 				DF67BDBD2A275027006A1CAA /* ViewController.m in Sources */,
 				DF67BDC42A275028006A1CAA /* main.m in Sources */,
+				DF67BDD32A2751EE006A1CAA /* MyGL View.m in Sources */,
 				DF67BDBA2A275027006A1CAA /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,6 +300,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MyGL-Game-Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -300,6 +325,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MyGL-Game-Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
